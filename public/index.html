@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<header>
+    <div class="sidebar">
+        <div class="lgc">
+            <div class="logo">
+                <i class='bx bxl-django'></i>
+                <div class="ln">NOTES</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nl">
+            <li>
+                <a href="home.html">
+                    <i class='bx bx-home'></i>
+                    <span class="lname">Home</span>
+                </a>
+                <span class="tt">Home</span>
+            </li>
+            <li>
+                <a href="quantm.html">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="lname">Notes</span>
+                </a>
+                <span class="tt">Notes</span>
+            </li>
+            <li>
+                <a href="http://localhost:5000/">
+                    <i class='bx bx-chat'></i>
+                    <span class="lname">ChatRoom</span>
+                </a>
+                <span class="tt">ChatRoom</span>
+            </li>
+            <li>
+                <a href="quantm.html">
+                    <i class='bx bx-notepad'></i>
+                    <span class="lname">Quantums</span>
+                </a>
+                <span class="tt">Quantums</span>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <i class='bx bxs-user-voice'></i>
+                    <span class="lname">Contact us</span>
+                </a>
+                <span class="tt">Contact us</span>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <!-- ==============chat room=================== -->
+<main>
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join Chatroom</h2>
+                <div class="form-input">
+                    <label for="">user name</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen">
+            <div class="header">
+                <div class="logo">Chatroom</div>
+                <button id="exit-chat">Exit</button>
+            </div>
+            <div class="messages">
+
+
+
+
+            </div>
+            <div class="typebox">
+                <input type="text" id="message-input">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+</main>
+</header>
+
+
+<script type="text/javascript" src="socket.io/socket.io.js"></script>
+<script type="text/javascript" src="code.js"></script>
+</body>
+<script>
+    let btn = document.querySelector("#btn");
+    let sidebar = document.querySelector(".sidebar");
+    let tt = document.querySelector(".tt");
+
+    btn.onclick = function () {
+        sidebar.classList.toggle("active")
+    }
+
+</script>
+
+</html>
